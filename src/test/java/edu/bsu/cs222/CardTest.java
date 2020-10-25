@@ -1,9 +1,9 @@
 package edu.bsu.cs222;
 
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+//All failed aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 public class CardTest {
     @Test
     public void testTransformCardJNum(){
@@ -30,9 +30,29 @@ public class CardTest {
     }
 
     @Test
-    public void testCompareCardPoints(){
+    public void testTransformCard10Num(){
         Card card = new Card();
-        Boolean result = card.compareCardPoints(1,11);
-        Assertions.assertTrue(result);
+        Assertions.assertEquals(10, card.transformCardPoint("10"));
+    }
+
+    @Test
+    public void testCompareCardPointsSmaller(){
+        Card card = new Card();
+        String result = card.compareCardPoints(1, 11);
+        Assertions.assertEquals("Smaller", result);
+    }
+
+    @Test
+    public void testCompareCardPointsBigger(){
+        Card card = new Card();
+        String result = card.compareCardPoints(11, 1);
+        Assertions.assertEquals("Bigger", result);
+    }
+
+    @Test
+    public void testCompareCardPointsSame(){
+        Card card = new Card();
+        String result = card.compareCardPoints(11, 11);
+        Assertions.assertEquals("Same", result);
     }
 }
