@@ -1,16 +1,9 @@
 package edu.bsu.cs222;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class CardInitial {
     private String suits;
     private String cardNumbers;
     public int point;
-
-    //List<Card> list = new ArrayList();
-    //JSONObject json = JSONObject.fromObject(str);
-    //Not sure if we need to use Json
 
     public CardInitial(String suits, String cardNumbers) {
         this.suits = suits;
