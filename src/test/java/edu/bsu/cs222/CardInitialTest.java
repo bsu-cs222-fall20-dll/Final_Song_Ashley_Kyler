@@ -3,7 +3,6 @@ package edu.bsu.cs222;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-//Failed
 public class CardInitialTest {
     @Test
     public void testInitialCardClubJ(){
@@ -43,27 +42,4 @@ public class CardInitialTest {
         Assertions.assertEquals("7", cardInitial.getCardNumbers());
         Assertions.assertEquals(7, cardInitial.getPoint());
     }
-
-    //The following tests should be in gameTest
-    //reserve temporarily
-    /*@Test
-    public void testCompareCardPointsSmaller(){
-        Card card = new Card();
-        String result = card.compareCardPoints(1, 11);
-        Assertions.assertEquals("Smaller", result);
-    }
-
-    @Test
-    public void testCompareCardPointsBigger(){
-        Card card = new Card();
-        String result = card.compareCardPoints(11, 1);
-        Assertions.assertEquals("Bigger", result);
-    }
-
-    @Test
-    public void testCompareCardPointsSame(){
-        Card card = new Card();
-        String result = card.compareCardPoints(11, 11);
-        Assertions.assertEquals("Same", result);
-    }*/
 }
