@@ -32,7 +32,7 @@ public class Player {
         return totalsum;
     }
     */
-    public int getHandSum() {
+    public int calculatePlayerScore() {
 
         for (int i = 0; i < playerHand.size(); i++) {
             playerNumofCards++;
@@ -76,21 +76,22 @@ public class Player {
 
 
     public void computeAllScore() {
-        this.calculatePlayerScore();
-        this.calculateComputerScore();
+        calculatePlayerScore();
+        calculateComputerScore();
 
-        if(playerScore > computerScore) {
+
+        if(playerNumofCards > computerScore) {
             computerLose = true;
             System.out.println("Player Win");
-        } else if(playerScore < computerScore) {
+        } else if(playerNumofCards < computerScore) {
             playerLose = true;
             System.out.println("Computer Win");
         } else {
             playerLose = true;
-            System.out.println("Play Even");
+            System.out.println("Push");
         }
 
         System.out.println("Computer Score: " + computerScore
-                + "\nPlayer Score: "+ playerScore);
+                + "\nPlayer Score: "+ playerNumofCards);
     }
 }
