@@ -8,8 +8,8 @@ public class Player {
     private int computerScore = 0;
     ArrayList playerHand = new ArrayList<>();
     ArrayList computerCards = new ArrayList();
-    private boolean playerLose = false;
-    private boolean computerLose = false;
+    boolean playerLose = false;
+    boolean computerLose = false;
     public boolean ComputerContinue = true;
 
     public Player() {
@@ -54,6 +54,7 @@ public class Player {
     //The following part is about computer
     public void calculateComputerScore() {
         computerScore = 0;
+
         for(int i = 0; i < computerCards.size(); i++) {
             CardInitial cardInitial = (CardInitial) computerCards.get(i);
             computerScore += cardInitial.point;
@@ -81,15 +82,14 @@ public class Player {
         if(playerScore > computerScore) {
             computerLose = true;
             System.out.println("Player Win");
-        }
-        else if(playerScore < computerScore) {
+        } else if(playerScore < computerScore) {
             playerLose = true;
             System.out.println("Computer Win");
-        }
-        else {
+        } else {
             playerLose = true;
             System.out.println("Play Even");
         }
+
         System.out.println("Computer Score: " + computerScore
                 + "\nPlayer Score: "+ playerScore);
     }
