@@ -26,7 +26,6 @@ public class Card {
         }
     }
 
-
     public CardInitial[] getCard() {
         return Card.cards;
     }

@@ -1,5 +1,4 @@
 package edu.bsu.cs222;
 
-public class Game {
-
+public class main {
 }
