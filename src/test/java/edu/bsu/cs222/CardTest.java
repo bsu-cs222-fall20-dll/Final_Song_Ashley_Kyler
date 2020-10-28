@@ -3,7 +3,6 @@ package edu.bsu.cs222;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-//Failed
 public class CardTest {
     @Test
         public void testInitialCardClubJ(){
