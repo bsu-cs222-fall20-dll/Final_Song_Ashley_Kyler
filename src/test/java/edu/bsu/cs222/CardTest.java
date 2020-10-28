@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Test;
 
 public class CardTest {
     @Test
-        public void testInitialCardClubJ(){
+        public void testCardClubJ(){
         Card card = new Card();
-        Assertions.assertEquals("F", card.compareCardsAfterShuffle());
+        Assertions.assertEquals("False", card.compareCardsAfterShuffle());
     }
 }
