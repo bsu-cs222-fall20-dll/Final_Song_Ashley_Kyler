@@ -2,7 +2,7 @@ package edu.bsu.cs222;
 
 import java.util.Scanner;
 
-public class Game {
+public class Game{
     Scanner input = new Scanner(System.in);
     Player player = new Player();
 
@@ -12,17 +12,18 @@ public class Game {
                 "1. Play\n"
                 + "2. Instruction\n"
                 + "3. Exit");
+        makeChoice();
     }
 
     public void makeChoice(){
         String choice = input.nextLine();
 
-        if (choice == "1"){
+        if (choice.equals("1")){
             playerContinue();
-        }else if (choice == "2"){
-            //System.out.println("instruction");
+        }else if (choice.equals("2")){
+            System.out.println("instruction");
             printMenu();
-        }else if(choice == "3"){
+        }else if(choice.equals("3")){
             System.out.println("Exit");
             System.exit(0);
         }else{
@@ -32,19 +33,24 @@ public class Game {
     }
 
     public void playerContinue(){
-        String playerContinueOrNot;
-        player.getOneCard();
-        //need to display the card
+        player.userPlayerGetCards();
+        player.getComputerPlayerChoice();
 
         if(player.ComputerContinue && player.playerLose == false) {
             player.getComputerPlayerChoice();
         }
 
         System.out.println("Would you like to continue?\n" + "yes or no");
+
+        continueGame();
+    }
+
+    public void continueGame(){
+        String playerContinueOrNot;
         playerContinueOrNot = input.nextLine();
 
-        if(playerContinueOrNot == "yes"){
-            player.getOneCard();
+        if(playerContinueOrNot.equals("yes")){
+            player.userPlayerGetCards();
         }else {
             System.out.println("You decide not to continue.");
 

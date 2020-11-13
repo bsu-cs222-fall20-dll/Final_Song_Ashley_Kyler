@@ -44,6 +44,7 @@ public class Card {
     public String compareCardsAfterShuffle() {
         CardInitial cardsBefore[] = new CardInitial[totalCards];
         String result = new String();
+
         for (int i = 0; i < totalCards; i++) {
             if (cardsBefore[i] == cards[i]){
                 result = "True";
