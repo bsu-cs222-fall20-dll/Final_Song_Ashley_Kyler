@@ -27,7 +27,9 @@ public class Game{
             System.out.println("Exit");
             System.exit(0);
         }else{
+            System.out.println();
             System.out.println("Error! Please enter a valid number.");
+            System.out.println();
             printMenu();
         }
     }
@@ -40,6 +42,7 @@ public class Game{
             player.getComputerPlayerChoice();
         }
 
+        System.out.println();
         System.out.println("Would you like to continue?\n" + "yes or no");
 
         continueGame();
@@ -52,6 +55,7 @@ public class Game{
         if(playerContinueOrNot.equals("yes")){
             player.userPlayerGetCards();
         }else {
+            System.out.println();
             System.out.println("You decide not to continue.");
 
             while (player.ComputerContinue) {
