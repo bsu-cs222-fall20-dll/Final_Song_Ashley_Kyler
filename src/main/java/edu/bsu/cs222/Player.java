@@ -1,5 +1,6 @@
 package edu.bsu.cs222;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 public class Player {
@@ -18,7 +19,11 @@ public class Player {
 
     public void userPlayerGetCards() {
         playerCards.add(card.getOneCard(1));
+        CardInitial cardInitial = (CardInitial) playerCards.get(0);
+        System.out.println("Now you have: ");
+        cardInitial.displayNewCard();
         calculatePlayerScore();
+
         if(playerScore > 21) {
             playerLose = true;
         }
@@ -44,7 +49,6 @@ public class Player {
 
     public void getComputerPlayerChoice() {
         computerCards.add(card.getOneCard(1));
-
         calculateComputerScore();
 
         if(computerScore > 21) {
@@ -53,15 +57,23 @@ public class Player {
         }else if(computerScore > 18){
             ComputerContinue = false;
             System.out.println("Computer Stop");
+            System.out.println();
         }
     }
 
-    public void displayCard(){
-        for (int i = 0; i <= computerCards.size(); i++) {
-            System.out.println("Computer's cards: " + computerCards.get(i));
+    public void displayCard() {
+        System.out.println("Computer's cards: ");
+        for (int i = 0; i < computerCards.size(); i++) {
+            CardInitial cardInitial = (CardInitial) computerCards.get(i);
+            cardInitial.displayNewCard();
         }
-        for (int i = 0; i <= playerCards.size(); i++) {
-            System.out.println("Your cards: " + playerCards.get(i));
+
+        System.out.println();
+
+        System.out.println("Your cards: ");
+        for (int i = 0; i < playerCards.size(); i++) {
+            CardInitial cardInitial = (CardInitial) playerCards.get(i);
+            cardInitial.displayNewCard();
         }
     }
 
@@ -70,6 +82,7 @@ public class Player {
         calculatePlayerScore();
         calculateComputerScore();
 
+        System.out.println();
         if(playerScore > computerScore) {
             computerLose = true;
             System.out.println("Player Win");
@@ -85,11 +98,5 @@ public class Player {
                 + "\nPlayer Score: "+ playerScore);
 
         displayCard();
-
-        /*for(int i = 0; i < computerCards.size(); i++) {
-            displayCard();
-            CardInitial cardInitial = (CardInitial) computerCards.get(i);
-            computerScore += cardInitial.point;
-        }*/
     }
 }

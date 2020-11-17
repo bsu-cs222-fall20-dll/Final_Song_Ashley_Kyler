@@ -30,8 +30,8 @@ public class CardInitial {
     }
 
     public void displayNewCard() {
-        System.out.print("Suit" + suits);
-        System.out.print("CardNumber" + cardNumbers);
-        System.out.println("Point" + point);
+        System.out.print(suits + cardNumbers);
+        System.out.println();
+        System.out.println("Your Point: " + point);
     }
 }
