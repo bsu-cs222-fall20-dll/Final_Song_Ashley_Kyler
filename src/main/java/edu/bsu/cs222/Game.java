@@ -55,15 +55,13 @@ public class Game{
     }
 
     public void playerContinue(){
-        player.getComputerPlayerChoice();
-
         if(player.ComputerContinue && !player.playerLose) {
             player.getComputerPlayerChoice();
         }
 
         System.out.println();
-        System.out.println("Hit(H) or Pass(P)?");
-
+        System.out.println("Ask or Suspend? (A or S)");
+        
         continueGame();
     }
 
@@ -71,14 +69,14 @@ public class Game{
         String playerContinueOrNot;
         playerContinueOrNot = input.nextLine();
 
-        if(playerContinueOrNot.equals("H")){
+        if(playerContinueOrNot.equals("A" )|| playerContinueOrNot.equals("Ask")){
             player.userPlayerGetOneMore();
             playerContinue();
 
             while (player.ComputerContinue) {
                 player.getComputerPlayerChoice();
             }
-        }else if(playerContinueOrNot.equals("P")){
+        }else if(playerContinueOrNot.equals("S") || playerContinueOrNot.equals("Suspend")){
             player.playerContinue = false;
 
             System.out.println();
