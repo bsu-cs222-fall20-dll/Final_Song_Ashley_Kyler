@@ -9,3 +9,5 @@ In order to get 21, the player has to add their cards together. An example of th
 The player will be dealt two cards to begin their turn. If the player thinks their cards do not equal 21, they can draw another card to add to their stack.
 If the player goes over 21, they "Bust," meaning that they computer wins by default. 
 
+Programmers: Songxiying He, Kyler Hudson, Ashley Vanaman
+
