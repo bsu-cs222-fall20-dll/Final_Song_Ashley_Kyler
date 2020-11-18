@@ -105,9 +105,11 @@ public class Player {
         } else if(playerScore < computerScore && computerScore < 21) {
             playerLose = true;
             System.out.println("Computer Win");
+        } else if(playerScore == computerScore){
+            System.out.println("Push(Tie)");
         } else {
             playerLose = true;
-            System.out.println("Push");
+            System.out.println("Invalid");
         }
 
         System.out.println("Computer Score: " + computerScore
