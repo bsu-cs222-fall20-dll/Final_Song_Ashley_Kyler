@@ -21,7 +21,7 @@ public class Player {
 
     public void userPlayerGetOneMore() {
         playerCards.add(card.getOneCard(numberOfPlayerWish));
-        numberOfPlayerWish = numberOfPlayerWish+1;
+        numberOfPlayerWish = numberOfPlayerWish + 1;
         CardInitial cardInitial = playerCards.get(0);
         System.out.println("Now you have: ");
         cardInitial.displayNewCard();
@@ -61,11 +61,6 @@ public class Player {
             computerLose = true;
             ComputerContinue = false;
         } else if (computerScore > 18) {
-            ComputerContinue = false;
-            System.out.println("Computer Stop");
-            System.out.println();
-        } else if (computerScore > playerScore){
-            computerLose = true;
             ComputerContinue = false;
             System.out.println("Computer Stop");
             System.out.println();
