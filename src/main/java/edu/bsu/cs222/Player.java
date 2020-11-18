@@ -53,14 +53,19 @@ public class Player {
         numberOfComputerWish = numberOfComputerWish - 1;
         calculateComputerScore();
 
-        if(!playerContinue) {
+        if (!playerContinue) {
             ComputerContinue = false;
             System.out.println("Computer Stop");
             System.out.println();
-        }else if(computerScore > 21) {
+        } else if (computerScore > 21) {
             computerLose = true;
             ComputerContinue = false;
-        }else if(computerScore > 18){
+        } else if (computerScore > 18) {
+            ComputerContinue = false;
+            System.out.println("Computer Stop");
+            System.out.println();
+        } else if (computerScore > playerScore){
+            computerLose = true;
             ComputerContinue = false;
             System.out.println("Computer Stop");
             System.out.println();
