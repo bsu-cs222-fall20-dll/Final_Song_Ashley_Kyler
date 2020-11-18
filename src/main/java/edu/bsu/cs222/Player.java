@@ -96,10 +96,10 @@ public class Player {
             System.out.println("Player Win");
         } else if(playerLose){
             System.out.println("Computer Win");
-        } else if(playerScore > computerScore && playerScore < 21) {
+        } else if(playerScore > computerScore && playerScore <= 21) {
             computerLose = true;
             System.out.println("Player Win");
-        } else if(playerScore < computerScore && computerScore < 21) {
+        } else if(playerScore < computerScore && computerScore <= 21) {
             playerLose = true;
             System.out.println("Computer Win");
         } else {
