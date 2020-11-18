@@ -25,7 +25,8 @@ public class Game{
             case "2":
                 System.out.print("Blackjack instructions\n"
                         + "This card game is only between the computer and the player.\n"
-                        + "Cards are counted by the number on their card, such as 2, 3, 4, etc."                        + "count as that number. For the face cards such as jack, queen,"
+                        + "Cards are counted by the number on their card, such as 2, 3, 4, etc."
+                        + "count as that number. For the face cards such as jack, queen,"
                         + "and king they are always worth 10. Finally, if you are dealt an ace,"
                         + "when the total is bigger than 21, then ace is 1, if not ace is 11.\n"
                         + "2 cards will be dealt at the beginning of each round. Both being face up "
@@ -36,7 +37,7 @@ public class Game{
                         + "If the total number of points after the card exceeds 21,"
                         + "it will be counted as a burst, and the player will lose this round of the game;"
                         + "If the number of points after the card is 21 points, you can not want to;"
-                        + "If the total number of points is less than 21, the player can continue to"
+                        + "If the total number of points is less than 21, the player can continue to "
                         + "\"ask\" and  \"suspend\" . \n");
                 System.out.println();
                 printMenu();
