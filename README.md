@@ -1,5 +1,4 @@
 # Final_Song_Ashley_Kyler
-
 Description:
 
 This code is built to be a card game called "21." The game is set up as on player game, that being because the other opponent is the computer. 
