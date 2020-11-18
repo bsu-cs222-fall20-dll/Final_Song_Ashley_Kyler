@@ -90,7 +90,9 @@ public class Player {
 
         System.out.println();
 
-        if(computerLose){
+        if(computerLose && playerLose){
+            System.out.println("Invalid");
+        } else if(computerLose){
             System.out.println("Player Win");
         } else if(playerLose){
             System.out.println("Computer Win");
@@ -102,7 +104,7 @@ public class Player {
             System.out.println("Computer Win");
         } else {
             playerLose = true;
-            System.out.println("Push");
+            System.out.println("Push(Tie)");
         }
 
         System.out.println("Computer Score: " + computerScore
