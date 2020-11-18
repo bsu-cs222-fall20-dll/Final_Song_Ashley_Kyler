@@ -1,16 +1,16 @@
 package edu.bsu.cs222;
 
 public class CardInitial {
-    private String suits;
-    private String cardNumbers;
+    private final String suits;
+    private final String cardNumbers;
     public int point;
 
     public CardInitial(String suits, String cardNumbers) {
         this.suits = suits;
         this.cardNumbers = cardNumbers;
-        if(cardNumbers== "J" || cardNumbers == "Q" || cardNumbers == "K") {
+        if(cardNumbers.equals("J") || cardNumbers.equals("Q") || cardNumbers.equals("K")) {
             this.point = 10;
-        } else if(cardNumbers == "A") {
+        } else if(cardNumbers.equals("A")) {
             this.point = 1;
         } else {
             this.point = Integer.parseInt(cardNumbers);
@@ -30,8 +30,7 @@ public class CardInitial {
     }
 
     public void displayNewCard() {
-        System.out.print(suits + cardNumbers);
+        System.out.print(suits + " " + cardNumbers);
         System.out.println();
-        System.out.println("Your Point: " + point);
     }
 }

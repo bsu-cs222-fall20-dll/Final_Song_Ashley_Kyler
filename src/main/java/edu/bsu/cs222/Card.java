@@ -3,10 +3,10 @@ package edu.bsu.cs222;
 import java.util.Random;
 
 public class Card {
-    static String suits[] = {"Heart", "Diamond", "Club", "Spade"};
-    static String cardNumbers[] = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
-    static final int totalCards = 52;//a set of new cards without joker
-    static CardInitial cards[] = new CardInitial[totalCards];
+    static String[] suits = {"Heart", "Diamond", "Club", "Spade"};
+    static String[] cardNumbers = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
+    static final int totalCards = 52;
+    static CardInitial[] cards = new CardInitial[totalCards];
 
     public Card() {
         for (int i = 0; i < suits.length; i++) {
@@ -26,24 +26,13 @@ public class Card {
         }
     }
 
-    public CardInitial[] getCard() {
-        return Card.cards;
-    }
-
     public CardInitial getOneCard(int n) {
         return Card.cards[n - 1];
     }
 
-    public void displayCardsAfterShuffle() {
-        for (int i = 0; i < totalCards; i++) {
-            cards[i].displayNewCard();
-        }
-        System.out.println();
-    }
-
     public String compareCardsAfterShuffle() {
-        CardInitial cardsBefore[] = new CardInitial[totalCards];
-        String result = new String();
+        CardInitial[] cardsBefore = new CardInitial[totalCards];
+        String result = "";
 
         for (int i = 0; i < totalCards; i++) {
             if (cardsBefore[i] == cards[i]){
