@@ -61,7 +61,7 @@ public class Game{
 
         System.out.println();
         System.out.println("Ask or Suspend? (A or S)");
-
+        
         continueGame();
     }
 
