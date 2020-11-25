@@ -21,7 +21,7 @@ public class Player {
 
     public void userPlayerGetOneMore() {
         playerCards.add(card.getOneCard(numberOfPlayerWish));
-        numberOfPlayerWish = numberOfPlayerWish+1;
+        numberOfPlayerWish = numberOfPlayerWish + 1;
         CardInitial cardInitial = playerCards.get(0);
         System.out.println("Now you have: ");
         cardInitial.displayNewCard();
