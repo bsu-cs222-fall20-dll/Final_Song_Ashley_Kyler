@@ -1,9 +1,11 @@
 package edu.bsu.cs222;
 
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class UserInterface extends Application {
@@ -24,21 +26,21 @@ public class UserInterface extends Application {
         StackPane stackPaneStart = new StackPane();
         StackPane stackPaneInstruction = new StackPane();
         StackPane stackPaneReportIssue = new StackPane();
-        Scene sceneStart = new Scene(stackPaneStart, 300, 300);
-        Scene sceneInstruction = new Scene(stackPaneInstruction, 300, 300);
-        Scene sceneReportIssue = new Scene(stackPaneReportIssue, 300, 300);
+        VBox options = new VBox();
+        Scene sceneMenu = new Scene(options);
+
+
 
         buttonStart.setText("Start");
         buttonInstruction.setText("Instruction");
         buttonReportIssue.setText("Report Issue");
 
-        stackPaneStart.getChildren().add(buttonStart);
-        stackPaneInstruction.getChildren().add(buttonInstruction);
-        stackPaneReportIssue.getChildren().add(buttonReportIssue);
 
-        stage.setScene(sceneStart);
-        stage.setScene(sceneInstruction);
-        stage.setScene(sceneReportIssue);
+        //menuPane.setCenter(options);
+        options.getChildren().addAll(buttonStart, buttonInstruction, buttonReportIssue);
+        options.setAlignment(Pos.CENTER);
+
+        stage.setScene(sceneMenu);
         stage.show();
     }
 }
