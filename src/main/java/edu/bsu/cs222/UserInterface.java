@@ -7,14 +7,12 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class UserInterface extends Application {
-    //CardPanel cardPanel = new CardPanel();
-    //not sure how to finish the image work
-    //we may divide it into two parts
-    private Stage stage;
 
     @Override
     public void start(Stage stage) {
-        this.stage = stage;
+        //CardPanel cardPanel = new CardPanel();
+        //not sure how to finish the image work
+        //we may divide it into two parts
         stage.setTitle("21 Game");
 
         Button buttonStart = new Button();
