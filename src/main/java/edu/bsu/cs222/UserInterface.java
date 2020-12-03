@@ -29,8 +29,8 @@ public class UserInterface extends Application {
 
         menuBox.getChildren().addAll(buttonStart, buttonInstruction, buttonReportIssue);
         menuBox.setPadding(new Insets(150, 100, 50, 100));
-
         menuBox.setAlignment(Pos.CENTER);
+
         stage.setScene(sceneMenu);
         stage.show();
     }
