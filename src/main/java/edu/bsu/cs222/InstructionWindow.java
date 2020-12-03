@@ -19,6 +19,7 @@ class InstrucionWindow {
         Label label = new Label();
         Button buttonGotIt = new Button("Got it!");
         Scene scene = new Scene(vBox);
+
         String[] line = {
                 "This card game is only between the computer and the player.\n",
                 "\nPoints are counted by the number on their card, such as 2, 3, 4, etc.\n",
@@ -38,7 +39,6 @@ class InstrucionWindow {
         stage.setTitle(title);
         stage.setMinWidth(300);
 
-
         label.setText(
                 line[0]  +
                 line[1]  +
@@ -56,7 +56,6 @@ class InstrucionWindow {
                 "\n\n\n\n"
         );
 
-
         buttonGotIt.setOnAction(actionEvent -> {
             answer = true;
             stage.close();
@@ -64,7 +63,6 @@ class InstrucionWindow {
 
         vBox.getChildren().addAll(label, buttonGotIt);
         vBox.setAlignment(Pos.CENTER);
-
 
         stage.setScene(scene);
         stage.showAndWait();
