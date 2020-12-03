@@ -5,10 +5,15 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class UserInterface extends Application {
+
+
+    public static void main(String[] args) { launch(args);
+    }
 
     @Override
     public void start(Stage stage) {
@@ -20,22 +25,34 @@ public class UserInterface extends Application {
         Button buttonStart = new Button();
         Button buttonInstruction = new Button();
         Button buttonReportIssue = new Button();
+        StackPane cardStackPane = new StackPane();
+        StackPane instructionStackPane = new StackPane();
         VBox menuBox = new VBox();
         Scene sceneMenu = new Scene(menuBox, 300, 300);
+        Scene cardScene = new Scene(cardStackPane, 600, 500);
+        //Panel cardPanel = new Panel();
 
         buttonStart.setText("Start");
         buttonInstruction.setText("Instruction");
         buttonReportIssue.setText("Report Issue");
 
+        cardStackPane.getChildren().add(buttonStart);
+        instructionStackPane.getChildren().add(buttonInstruction);
+
         menuBox.getChildren().addAll(buttonStart, buttonInstruction, buttonReportIssue);
         menuBox.setPadding(new Insets(150, 100, 50, 100));
         menuBox.setAlignment(Pos.CENTER);
+
+        buttonInstruction.setOnAction(actionEvent -> {
+                boolean answer = InstrucionWindow.display("21 Rule");
+                System.out.println(answer);
+        });
+
+        buttonStart.setOnAction(actionEvent -> stage.setScene(cardScene));
 
         stage.setScene(sceneMenu);
         stage.show();
     }
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+
 }
