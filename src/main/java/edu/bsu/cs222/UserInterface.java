@@ -1,6 +1,8 @@
 package edu.bsu.cs222;
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
@@ -26,6 +28,9 @@ public class UserInterface extends Application {
         buttonReportIssue.setText("Report Issue");
 
         menuBox.getChildren().addAll(buttonStart, buttonInstruction, buttonReportIssue);
+        menuBox.setPadding(new Insets(150, 100, 50, 100));
+        menuBox.setAlignment(Pos.CENTER);
+
         stage.setScene(sceneMenu);
         stage.show();
     }
