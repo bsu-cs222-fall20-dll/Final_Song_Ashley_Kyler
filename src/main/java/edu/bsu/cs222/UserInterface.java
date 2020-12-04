@@ -45,10 +45,9 @@ public class UserInterface extends Application {
         menuBox.setAlignment(Pos.CENTER);
 
         buttonInstruction.setOnAction(actionEvent -> {
-                boolean answer = InstrucionWindow.display("21 Rule");
+                boolean answer = Instruction.display("21 Rule");
                 System.out.println(answer);
         });
-
         buttonStart.setOnAction(actionEvent -> stage.setScene(cardScene));
 
         stage.setScene(sceneMenu);
