@@ -40,7 +40,8 @@ public class UserInterface extends Application {
         instructionStackPane.getChildren().add(buttonInstruction);
 
         menuBox.getChildren().addAll(buttonStart, buttonInstruction, buttonReportIssue);
-        menuBox.setPadding(new Insets(150, 100, 50, 100));
+        menuBox.setSpacing(6);
+        menuBox.setPadding(new Insets(150, 100, 30, 100));
         menuBox.setAlignment(Pos.CENTER);
 
         buttonInstruction.setOnAction(actionEvent -> {
