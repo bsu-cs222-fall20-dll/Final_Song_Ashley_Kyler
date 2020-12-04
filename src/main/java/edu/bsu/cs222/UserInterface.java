@@ -20,6 +20,7 @@ public class UserInterface extends Application {
         //CardPanel cardPanel = new CardPanel();
         //not sure how to finish the image work
         //we may divide it into two parts
+        ReportPane reportPane = new ReportPane();
         stage.setTitle("21 Game");
 
         Button buttonStart = new Button();
@@ -49,6 +50,7 @@ public class UserInterface extends Application {
                 System.out.println(answer);
         });
         buttonStart.setOnAction(actionEvent -> stage.setScene(cardScene));
+        buttonReportIssue.setOnAction(actionEvent -> reportPane.start());
 
         stage.setScene(sceneMenu);
         stage.show();
