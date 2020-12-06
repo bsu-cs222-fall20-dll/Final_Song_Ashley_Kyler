@@ -11,17 +11,19 @@ public class CheckReportInfo {
 
         boolean reportAnswer;
         if (address.matches(addressSample) && problem.equals("")) {
-                System.out.println("Error: Nothing is reported.");
+                System.out.println("Nothing is reported.");
                 reportAnswer = false;
             } else if(address.matches(addressSample) && problem != null) {
                 System.out.println("Email is: " + address);
+                System.out.println("The problem is: " + problem);
                 reportAnswer = true;
-
         } else {
-            System.out.println("Error: " + textEmailField.getText() + " is invalid.");
+            System.out.println("The address " + address + " is invalid.");
             reportAnswer = false;
         }
+        //System.out.println("test");
         return reportAnswer;
+
     }
 
 }
