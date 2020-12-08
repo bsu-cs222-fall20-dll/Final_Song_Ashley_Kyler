@@ -34,6 +34,8 @@ public class ReportPane {
         contentInput.setPrefSize(200, 100);
         contentInput.setScrollLeft(1);
 
+
+
         GridPane.setConstraints(emailLabel, 0, 0);
         GridPane.setConstraints(emailInput, 1, 0);
         GridPane.setConstraints(issueLabel, 0, 1);

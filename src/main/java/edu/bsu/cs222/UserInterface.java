@@ -20,6 +20,7 @@ public class UserInterface extends Application {
         //not sure how to finish the image work
         //we may divide it into two parts
         ReportPane reportPane = new ReportPane();
+        CardScene cardScene = new CardScene();
         stage.setTitle("21 Game");
 
         Button buttonStart = new Button();
@@ -28,8 +29,7 @@ public class UserInterface extends Application {
         StackPane cardStackPane = new StackPane();
         StackPane instructionStackPane = new StackPane();
         VBox menuBox = new VBox();
-        Scene sceneMenu = new Scene(menuBox, 300, 300);
-        Scene cardScene = new Scene(cardStackPane, 600, 500);
+        Scene menuScene = new Scene(menuBox, 300, 300);
         //Panel cardPanel = new Panel();
 
         buttonStart.setText("Start");
@@ -48,10 +48,10 @@ public class UserInterface extends Application {
                 boolean answer = Instruction.display("21 Rule");
                 System.out.println(answer);
         });
-        buttonStart.setOnAction(actionEvent -> stage.setScene(cardScene));
+        buttonStart.setOnAction(actionEvent -> cardScene.start());
         buttonReportIssue.setOnAction(actionEvent -> reportPane.start());
 
-        stage.setScene(sceneMenu);
+        stage.setScene(menuScene);
         stage.show();
     }
 
