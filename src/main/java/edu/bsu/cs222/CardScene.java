@@ -8,12 +8,13 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
+
 public class CardScene {
     //create for card image
     //it is divided from user interface
     //test
     public void start() {
-        //Game game = new Game();
+        Game game = new Game();
         Button buttonAsk = new Button("Ask");
         Button buttonSuspend = new Button("Suspend");
         Button buttonRestart = new Button("Restart");
@@ -33,5 +34,15 @@ public class CardScene {
 
         gameStage.setScene(playScene);
         gameStage.show();
+
+        buttonAsk.setOnAction(actionEvent -> game.playerContinue());
+        buttonSuspend.setOnAction(actionEvent -> game.suspendGame());
+        buttonExit.setOnAction(actionEvent -> {
+            boolean exitAnswer = ExitConfirmationDialog.getExitAnswer();
+            System.out.println(exitAnswer);
+            if (exitAnswer){System.exit(0);}
+        });
     }
+
+
 }
