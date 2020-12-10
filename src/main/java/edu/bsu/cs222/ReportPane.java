@@ -1,6 +1,7 @@
 package edu.bsu.cs222;
 
 import javafx.geometry.Insets;
+//mport javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -12,20 +13,20 @@ import javafx.stage.Stage;
 public class ReportPane {
     public void start() {
         Stage reportStage = new Stage();
-        GridPane gridPane = new GridPane();
+        GridPane reportGridPane = new GridPane();
         Label emailLabel = new Label("E-mail:");
         Label issueLabel = new Label("Issue:");
         TextField emailInput = new TextField();
         TextArea contentInput = new TextArea();
         Button buttonReport = new Button("Submit");
-        Scene reportScene = new Scene(gridPane, 300, 300);
+        Scene reportScene = new Scene(reportGridPane, 300, 300);
 
         reportStage.setTitle("Feedback");
 
-        gridPane.setPadding(new Insets(10, 10, 10, 10));
-        gridPane.setVgap(10);
-        gridPane.setHgap(10);
-        gridPane.getChildren().addAll(emailLabel, emailInput, issueLabel, contentInput, buttonReport);
+        reportGridPane.setPadding(new Insets(10, 10, 10, 10));
+        reportGridPane.setVgap(10);
+        reportGridPane.setHgap(10);
+        reportGridPane.getChildren().addAll(emailLabel, emailInput, issueLabel, contentInput, buttonReport);
 
         emailInput.setPromptText("   @gmail.com");
         contentInput.setPromptText("Please describe the problems that you meet");
@@ -33,8 +34,6 @@ public class ReportPane {
         contentInput.setWrapText(true);
         contentInput.setPrefSize(200, 100);
         contentInput.setScrollLeft(1);
-
-
 
         GridPane.setConstraints(emailLabel, 0, 0);
         GridPane.setConstraints(emailInput, 1, 0);
