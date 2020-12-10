@@ -1,11 +1,16 @@
 package edu.bsu.cs222;
 
+//import com.sun.javafx.tk.Toolkit;
+//import javafx.scene.image.Image;
+//import javafx.scene.image.ImageView;
+
+//import java.awt.*;
 import java.util.Random;
 
 public class Card {
+    static final int totalCards = 52;
     static String[] suits = {"Heart", "Diamond", "Club", "Spade"};
     static String[] cardNumbers = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
-    static final int totalCards = 52;
     static CardInitial[] cards = new CardInitial[totalCards];
 
     public Card() {
@@ -28,6 +33,13 @@ public class Card {
 
     public CardInitial getOneCard(int n) {
         return Card.cards[n - 1];
+    }
+
+    public void showCards() {
+        for(int i = 0; i < totalCards; i++) {
+            cards[i].displayNewCard();
+        }
+        System.out.println();
     }
 
     public String compareCardsAfterShuffle() {
