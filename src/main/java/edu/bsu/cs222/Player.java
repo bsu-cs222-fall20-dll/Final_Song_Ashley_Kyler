@@ -40,13 +40,13 @@ public class Player extends Pane {
         numberOfComputerWish = numberOfComputerWish - 1;
         calculateComputerScore();
 
-        if (!playerContinue) {
+        if (computerScore > 21) {
+            computerLose = true;
+            ComputerContinue = false;
+        } else if (!playerContinue) {
             ComputerContinue = false;
             System.out.println("Computer Stop");
             System.out.println();
-        } else if (computerScore > 21) {
-            computerLose = true;
-            ComputerContinue = false;
         } else if (computerScore > 18) {
             ComputerContinue = false;
             System.out.println("Computer Stop");
@@ -104,7 +104,6 @@ public class Player extends Pane {
     }
 
     public String displayPlayerFirstCard() {
-        userPlayerGetOneMore();
         String playerFirstCards = "";
         if (playerCards.size() > 0) {
             CardInitial cardInitial = playerCards.get(0);
