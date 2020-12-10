@@ -91,11 +91,10 @@ public class CardScene {
     }
 
     public void startGame(){
-        if(player.ComputerContinue && !player.playerLose) {
+        if(player.computerContinue && !player.playerLose) {
             player.getComputerPlayerChoice();
         }
         player.userPlayerGetOneMore();
-        player.getComputerPlayerChoice();
     }
 
     public void suspendGame() {

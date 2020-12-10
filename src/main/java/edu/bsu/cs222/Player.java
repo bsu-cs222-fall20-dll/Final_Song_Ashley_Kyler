@@ -18,7 +18,7 @@ public class Player extends Pane {
     ArrayList <CardInitial> computerCards = new ArrayList <> ();
     boolean playerLose = false;
     boolean computerLose = false;
-    public boolean ComputerContinue = true;
+    public boolean computerContinue = true;
     public boolean playerContinue = true;
 
     public Player() {
@@ -36,22 +36,23 @@ public class Player extends Pane {
     }
 
     public void getComputerPlayerChoice() {
-        computerCards.add(card.getOneCard(numberOfComputerWish));
-        numberOfComputerWish = numberOfComputerWish - 1;
         calculateComputerScore();
 
         if (computerScore > 21) {
             computerLose = true;
-            ComputerContinue = false;
-        } else if (!playerContinue) {
-            ComputerContinue = false;
+            computerContinue = false;
+        } else if (computerScore > 18) {
+            computerContinue = false;
             System.out.println("Computer Stop");
             System.out.println();
-        } else if (computerScore > 18) {
-            ComputerContinue = false;
+        } else if (!playerContinue) {
+            computerContinue = false;
             System.out.println("Computer Stop");
             System.out.println();
         }
+
+        if(computerContinue){computerCards.add(card.getOneCard(numberOfComputerWish));}
+        numberOfComputerWish = numberOfComputerWish - 1;
     }
 
     public void calculatePlayerScore () {
@@ -149,9 +150,10 @@ public class Player extends Pane {
         computerScore = 0;
         playerLose = false;
         computerLose = false;
-        ComputerContinue = true;
         playerCards.clear();
         computerCards.clear();
+        computerContinue = true;
+        playerContinue = true;
 
         for(int i = 0; i < 2; i++) {
             calculatePlayerScore();
