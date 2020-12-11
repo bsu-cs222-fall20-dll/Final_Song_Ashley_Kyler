@@ -25,16 +25,17 @@ public class Player extends Pane {
         card.shuffle();
     }
 
+    //adds a card to players hand
     public void userPlayerGetOneMore() {
         playerCards.add(card.getOneCard(numberOfPlayerWish));
         numberOfPlayerWish = numberOfPlayerWish + 1;
         calculatePlayerScore();
-
+    //player will lose if gone over 21
         if(playerScore > 21) {
             playerLose = true;
         }
     }
-
+    //rules for the computer to stop if gone over 21
     public void getComputerPlayerChoice() {
         calculateComputerScore();
 
@@ -62,13 +63,6 @@ public class Player extends Pane {
         }
 
     }
-
-    /*public String displayPlayerScore() {
-        calculatePlayerScore();
-        String playerTotalScore;
-        playerTotalScore = String.valueOf(playerScore);
-        return playerTotalScore;
-    }*/
 
     public void calculateComputerScore() {
         computerScore = 0;
@@ -103,7 +97,7 @@ public class Player extends Pane {
 
         return playerFinalCards.toString();
     }
-
+    //displays the card
     public String displayPlayerFirstCard() {
         String playerFirstCards = "";
         if (playerCards.size() > 0) {
@@ -113,7 +107,7 @@ public class Player extends Pane {
         return playerFirstCards;
     }
 
-    public String returnResultScore(){
+    public String returnResult() {
         this.calculatePlayerScore();
         this.calculateComputerScore();
 

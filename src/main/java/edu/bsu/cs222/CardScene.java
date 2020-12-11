@@ -71,6 +71,7 @@ public class CardScene {
         buttonAsk.setOnAction(actionEvent -> {
             startGame();
             playerCardArea.setText(player.displayPlayerFirstCard());
+            playerCardArea.setText(player.displayPlayerFinalCards());
         });
         buttonSuspend.setOnAction(actionEvent -> {
             suspendGame() ;

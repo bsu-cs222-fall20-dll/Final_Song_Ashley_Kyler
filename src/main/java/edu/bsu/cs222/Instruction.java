@@ -22,9 +22,10 @@ public class Instruction {
         rule.setText(
                 "   This card game is only between the computer and the player." + "\n" + "\n" +
                 "   Points are counted by the number on their card, such as 2, 3, 4, etc." + "\n" +
-                "For the face cards such as jack, queen and king, they are always worth  " + "\n" +
-                "10 points. If your card is an ace, you will get one point.              " + "\n" + "\n" +
+                "For the face cards such as Jack, Queen and King, they are always worth  " + "\n" +
+                "10 points. If your card is an Ace, you will get one point.              " + "\n" + "\n" +
                 "   At the beginning of each round, you can see the first card you get.  " + "\n" +
+                "Then you can ask for a new card or suspend the round. " + "\n" +
                 "The goal of each round is to get 21, or as close to 21 as you can get   " + "\n" +
                 "without going over." + "\n" + "\n" +
                 "   Your points will be calculated automatically." + "\n" + "\n" +
@@ -45,7 +46,7 @@ public class Instruction {
         instructionBox.setAlignment(Pos.CENTER);
 
         instructionStage.initModality(Modality.APPLICATION_MODAL);
-        instructionStage.setTitle("21 Rule");
+        instructionStage.setTitle("21 Rules");
         instructionStage.setMinWidth(300);
         instructionStage.setScene(instructionScene);
         instructionStage.showAndWait();

@@ -12,6 +12,7 @@ public class CheckReportInfo {
         String addressSample = "\\w+[@]+[bsu]{3}\\.edu";
 
         boolean reportAnswer;
+        // tells user if an answer was reported
         if (address.matches(addressSample) && problem.equals("")) {
                 //System.out.println("Nothing is reported.");
             return "Nothing is reported";

@@ -11,3 +11,6 @@ If the player goes over 21, they "Bust," meaning that they computer wins by defa
 
 Programmers: Songxiying He, Kyler Hudson, Ashley Vanaman
 
+Language: Java
+
+Programming Software: IntelliJ IDEA

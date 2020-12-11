@@ -19,6 +19,7 @@ public class CardInitial {
     //private final int cardHeight = 100;
     public int point;
 
+    //how the cards are scored based on there number or letter
     public CardInitial(String suits, String cardNumbers) {
         this.suits = suits;
         this.cardNumbers = cardNumbers;
@@ -44,6 +45,7 @@ public class CardInitial {
         return point;
     }
 
+    //allows the user to see the card they've received
     public void displayNewCard() {
         System.out.print(suits + " " + cardNumbers);
         System.out.println();
