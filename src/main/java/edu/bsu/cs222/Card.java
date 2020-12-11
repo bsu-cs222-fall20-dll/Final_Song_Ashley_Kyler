@@ -8,6 +8,7 @@ package edu.bsu.cs222;
 import java.util.Random;
 
 public class Card {
+    #Card Classification
     static final int totalCards = 52;
     static String[] suits = {"Heart", "Diamond", "Club", "Spade"};
     static String[] cardNumbers = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
@@ -43,6 +44,7 @@ public class Card {
     }
 
     public String compareCardsAfterShuffle() {
+        
         CardInitial[] cardsBefore = new CardInitial[totalCards];
         String result = "";
 
