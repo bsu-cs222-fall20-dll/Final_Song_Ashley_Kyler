@@ -44,7 +44,7 @@ public class Card {
     }
 
     public String compareCardsAfterShuffle() {
-        Being able to compare cards after each shuffle
+        // Being able to compare cards after each shuffle
         CardInitial[] cardsBefore = new CardInitial[totalCards];
         String result = "";
 
