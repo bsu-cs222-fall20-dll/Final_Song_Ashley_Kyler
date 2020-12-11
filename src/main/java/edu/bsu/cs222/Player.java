@@ -65,6 +65,7 @@ public class Player extends Pane {
     }
 
     public String displayPlayerScore() {
+        // Shows player's score
         calculatePlayerScore();
         String playerTotalScore;
         playerTotalScore = String.valueOf(playerScore);
