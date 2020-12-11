@@ -30,7 +30,7 @@ public class Card {
             cards[p] = temp;
         }
     }
-
+    //allowing the user or computer to draw one card
     public CardInitial getOneCard(int n) {
         return Card.cards[n - 1];
     }
