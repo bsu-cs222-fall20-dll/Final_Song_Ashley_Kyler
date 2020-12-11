@@ -140,6 +140,7 @@ public class Player extends Pane {
                     + "\nPlayer Score: "+ playerScore);
         } else {
             playerLose = true;
+            computerLose = true;
             return "Push(Tie)\n"
                     +("Computer Score: " + displayComputerScore()
                     + "\nPlayer Score: "+ displayPlayerScore());
