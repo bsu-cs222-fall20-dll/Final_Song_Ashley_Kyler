@@ -1,5 +1,8 @@
 # Final_Song_Ashley_Kyler
-Description:
+Now it is release v.0.3.0, users can view the game and rule in the UI.
+We added reporting issue, restart and exit confirmation function.
+
+Game Description:
 
 This code is built to be a card game called "21." The game is set up as one player game, that being because the other opponent is the computer. 
 The game uses a standard deck of cards. The goal is to get 21, or as close to 21 as possible, before the computer does. 
