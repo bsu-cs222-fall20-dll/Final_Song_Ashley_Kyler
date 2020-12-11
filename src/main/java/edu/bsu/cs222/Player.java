@@ -48,7 +48,7 @@ public class Player extends Pane {
         } else if (!playerContinue) {
             computerContinue = false;
             System.out.println("Computer Stop");
-            System.out.println();
+            System.out.println();//remember to delete
         }
 
         if(computerContinue){computerCards.add(card.getOneCard(numberOfComputerWish));}
@@ -63,12 +63,12 @@ public class Player extends Pane {
 
     }
 
-    public String displayPlayerScore() {
+    /*public String displayPlayerScore() {
         calculatePlayerScore();
         String playerTotalScore;
         playerTotalScore = String.valueOf(playerScore);
         return playerTotalScore;
-    }
+    }*/
 
     public void calculateComputerScore() {
         computerScore = 0;
@@ -77,12 +77,12 @@ public class Player extends Pane {
         }
     }
 
-    public String displayComputerScore() {
+    /*public String displayComputerScore() {
         calculateComputerScore();
         String computerTotalScore;
         computerTotalScore = String.valueOf(computerScore);
         return computerTotalScore;
-    }
+    }*/
 
     public String displayComputerFinalCards() {
         StringBuilder computerFinalCards = new StringBuilder();
@@ -113,35 +113,29 @@ public class Player extends Pane {
         return playerFirstCards;
     }
 
-    public String returnResult() {
+    public String returnResultScore(){
         this.calculatePlayerScore();
         this.calculateComputerScore();
 
+        return ("Computer Score: " + computerScore + "\nPlayer Score: "+ playerScore);
+    }
+
+    public String returnResult() {
         if(computerLose && playerLose){
             return "Invalid";
         } else if(computerLose){
-            return "Player Win\n"
-                    +("Computer Score: " + computerScore
-                    + "\nPlayer Score: "+ playerScore);
+            return "Player Win\n" + returnResultScore();
         } else if(playerLose){
-            return "Computer Win\n"
-                    +("Computer Score: " + computerScore
-                    + "\nPlayer Score: "+ playerScore);
+            return "Computer Win\n" + returnResultScore();
         } else if(playerScore > computerScore && playerScore <= 21) {
             computerLose = true;
-            return "Player Win\n"
-                    +("Computer Score: " + computerScore
-                    + "\nPlayer Score: "+ playerScore);
+            return "Player Win\n" + returnResultScore();
         } else if(playerScore < computerScore && computerScore <= 21) {
             playerLose = true;
-            return "Computer Win\n"
-                    +("Computer Score: " + computerScore
-                    + "\nPlayer Score: "+ playerScore);
+            return "Computer Win\n" + returnResultScore();
         } else {
             playerLose = true;
-            return "Push(Tie)\n"
-                    +("Computer Score: " + displayComputerScore()
-                    + "\nPlayer Score: "+ displayPlayerScore());
+            return "Push(Tie)\n" + returnResultScore();
         }
     }
 

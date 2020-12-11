@@ -45,8 +45,7 @@ public class ReportPane {
         reportStage.show();
 
         buttonReport.setOnAction(actionEvent -> {
-            boolean reportAnswer = CheckReportInfo.isRightFormat(emailInput, contentInput);
-            System.out.println(reportAnswer);
+            System.out.println(CheckReportInfo.isRightFormat(emailInput, contentInput));
             reportStage.close();
         });
     }
