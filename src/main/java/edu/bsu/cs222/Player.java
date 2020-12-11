@@ -1,12 +1,7 @@
 package edu.bsu.cs222;
 
-//import javafx.geometry.Rectangle2D;
-//import javafx.scene.image.Image;
-//import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-
 import java.util.ArrayList;
-//import java.util.List;
 
 public class Player extends Pane {
     Card card = new Card();
@@ -25,17 +20,16 @@ public class Player extends Pane {
         card.shuffle();
     }
 
-    //adds a card to players hand
     public void userPlayerGetOneMore() {
         playerCards.add(card.getOneCard(numberOfPlayerWish));
         numberOfPlayerWish = numberOfPlayerWish + 1;
         calculatePlayerScore();
-    //player will lose if gone over 21
+
         if(playerScore > 21) {
             playerLose = true;
         }
     }
-    //rules for the computer to stop if gone over 21
+
     public void getComputerPlayerChoice() {
         calculateComputerScore();
 
@@ -44,12 +38,8 @@ public class Player extends Pane {
             computerContinue = false;
         } else if (computerScore > 18) {
             computerContinue = false;
-            System.out.println("Computer Stop");
-            System.out.println();
         } else if (!playerContinue) {
             computerContinue = false;
-            System.out.println("Computer Stop");
-            System.out.println();//remember to delete
         }
 
         if(computerContinue){computerCards.add(card.getOneCard(numberOfComputerWish));}
@@ -58,6 +48,7 @@ public class Player extends Pane {
 
     public void calculatePlayerScore () {
         playerScore = 0;
+
         for (CardInitial cardInitial : playerCards) {
             playerScore += cardInitial.point;
         }
@@ -66,38 +57,28 @@ public class Player extends Pane {
 
     public void calculateComputerScore() {
         computerScore = 0;
+
         for (CardInitial cardInitial : computerCards) {
             computerScore += cardInitial.point;
         }
     }
 
-    /*public String displayComputerScore() {
-        calculateComputerScore();
-        String computerTotalScore;
-        computerTotalScore = String.valueOf(computerScore);
-        return computerTotalScore;
-    }*/
-
     public String displayComputerFinalCards() {
         StringBuilder computerFinalCards = new StringBuilder();
-
         for (CardInitial cardInitial : computerCards) {
             computerFinalCards.append(cardInitial.displayFinalCard());
         }
-
         return computerFinalCards.toString();
     }
 
     public String displayPlayerFinalCards() {
        StringBuilder playerFinalCards = new StringBuilder();
-
         for (CardInitial cardInitial : playerCards) {
             playerFinalCards.append(cardInitial.displayFinalCard());
         }
-
         return playerFinalCards.toString();
     }
-    //displays the card
+
     public String displayPlayerFirstCard() {
         String playerFirstCards = "";
         if (playerCards.size() > 0) {
@@ -107,7 +88,7 @@ public class Player extends Pane {
         return playerFirstCards;
     }
 
-    public String returnResult() {
+    public String returnResultScore() {
         this.calculatePlayerScore();
         this.calculateComputerScore();
 
@@ -116,11 +97,13 @@ public class Player extends Pane {
 
     public String returnResult() {
         if(computerLose && playerLose){
-            return "Invalid";
+            return "Invalid\n" + returnResultScore();
         } else if(computerLose){
             return "Player Win\n" + returnResultScore();
         } else if(playerLose){
             return "Computer Win\n" + returnResultScore();
+        } else if(playerScore >21 && computerScore > 21) {
+            return "Invalid\n" + returnResultScore();
         } else if(playerScore > computerScore && playerScore <= 21) {
             computerLose = true;
             return "Player Win\n" + returnResultScore();
@@ -146,8 +129,6 @@ public class Player extends Pane {
         for(int i = 0; i < 2; i++) {
             calculatePlayerScore();
             calculateComputerScore();
-            //repaint();
-            //use for images
         }
     }
 
