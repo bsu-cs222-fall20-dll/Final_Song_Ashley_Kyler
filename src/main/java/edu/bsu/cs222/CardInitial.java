@@ -1,6 +1,9 @@
 package edu.bsu.cs222;
 
 public class CardInitial {
+    //This class is for
+    //transferring cards information
+
     private final String suits;
     private final String cardNumbers;
     public int point;

@@ -10,6 +10,9 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class Instruction {
+    //This class is for
+    //displaying game rule
+
     private static boolean answer;
 
     public static boolean display() {

@@ -11,6 +11,9 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class ExitConfirmationDialog {
+    //This class is for setting
+    //exit confirmation dialog
+
     private static boolean exitAnswer;
 
     public static boolean getExitAnswer(){

@@ -4,6 +4,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class CheckReportInfo {
+    //This class is for Report Issue
+    // checking function
+
     public static String isRightFormat(TextField textEmailField, TextArea textContentArea) {
         String address = textEmailField.getText();
         String problem = textContentArea.getText();

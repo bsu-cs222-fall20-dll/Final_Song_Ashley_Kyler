@@ -11,6 +11,8 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class UserInterface extends Application {
+    //Main UI
+
     public static void main(String[] args) { launch(args); }
 
     @Override
