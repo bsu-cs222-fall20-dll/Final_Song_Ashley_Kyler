@@ -10,6 +10,7 @@ The player will be dealt two cards to begin their turn. If the player thinks the
 If the player goes over 21, they "Bust," meaning that they computer wins by default. 
 
 Programmers: Songxiying He, Kyler Hudson, Ashley Vanaman
-Language: Java
-Programming Software: IntelliJ IDEA
 
+Language: Java
+
+Programming Software: IntelliJ IDEA
