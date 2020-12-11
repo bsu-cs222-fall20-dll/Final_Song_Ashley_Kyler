@@ -24,7 +24,7 @@ public class Instruction {
                 "   Points are counted by the number on their card, such as 2, 3, 4, etc." + "\n" +
                 "For the face cards such as Jack, Queen and King, they are always worth  " + "\n" +
                 "10 points. If your card is an Ace, you will get one point.              " + "\n" + "\n" +
-                "   At the beginning of each round, you can see the first card you get.  " + "\n" +
+                "   At the beginning of each round, you can see the cards that you get.  " + "\n" +
                 "Then you can ask for a new card or suspend the round. " + "\n" +
                 "The goal of each round is to get 21, or as close to 21 as you can get   " + "\n" +
                 "without going over." + "\n" + "\n" +

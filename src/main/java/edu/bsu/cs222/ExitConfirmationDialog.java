@@ -10,8 +10,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-//import javax.swing.*;
-
 public class ExitConfirmationDialog {
     private static boolean exitAnswer;
 
@@ -31,7 +29,7 @@ public class ExitConfirmationDialog {
 
         buttonYes.setOnAction(actionEvent -> {
             exitAnswer = true;
-            confirmationAlert.showAndWait();//Alert uses Chinese
+            confirmationAlert.showAndWait();
             exitStage.close();
         });
         buttonNo.setOnAction(actionEvent -> {
@@ -54,4 +52,5 @@ public class ExitConfirmationDialog {
 
         return exitAnswer;
     }
+
 }

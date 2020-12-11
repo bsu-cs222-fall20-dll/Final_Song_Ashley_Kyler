@@ -6,21 +6,15 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-//import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class UserInterface extends Application {
-
-
     public static void main(String[] args) { launch(args); }
 
     @Override
     public void start(Stage primaryStage) {
-        //CardPanel cardPanel = new CardPanel();
-        //not sure how to finish the image work
-        //we may divide it into two parts
         ReportPane reportPane = new ReportPane();
         CardScene cardScene = new CardScene();
         Label welcomeLabel = new Label();
@@ -31,7 +25,6 @@ public class UserInterface extends Application {
         StackPane instructionStackPane = new StackPane();
         VBox menuBox = new VBox();
         Scene menuScene = new Scene(menuBox, 300, 300);
-        //Panel cardPanel = new Panel();
 
         welcomeLabel.setText("Welcome to the 21 game");
 
