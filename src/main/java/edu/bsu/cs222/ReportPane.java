@@ -10,6 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+//reporting issues with the program
 public class ReportPane {
     public void start() {
         Stage reportStage = new Stage();
