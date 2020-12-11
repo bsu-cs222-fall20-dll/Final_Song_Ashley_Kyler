@@ -10,6 +10,10 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class ReportPane {
+    //This class is for setting
+    //Report Issue function
+    //connecting CheckReportInfo class
+
     public void start() {
         Stage reportStage = new Stage();
         GridPane reportGridPane = new GridPane();

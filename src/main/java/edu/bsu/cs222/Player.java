@@ -4,6 +4,9 @@ import javafx.scene.layout.Pane;
 import java.util.ArrayList;
 
 public class Player extends Pane {
+    //This class set card game rule
+    //To make sure the car game works
+
     Card card = new Card();
     static int numberOfPlayerWish = 1;
     static int numberOfComputerWish = 52;

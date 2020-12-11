@@ -10,6 +10,9 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 public class CardScene {
+    //This class is for
+    //displaying cards
+
     Player player = new Player();
     Button buttonAsk = new Button("Ask");
     Button buttonSuspend = new Button("Suspend");
